@@ -1157,3 +1157,201 @@ figcaption a:hover {
     color: #007a6e !important;
 }
 
+/* Global responsive adjustments */
+@media screen and (max-width: 770px) {
+    /* Title text adjustments */
+    .title-text {
+        padding: 30px 15px;
+    }
+    
+    .title-text h1 {
+        font-size: 24px;
+    }
+    
+    .title-text p {
+        font-size: 16px;
+    }
+
+    /* Banner section */
+    .banner-text {
+        padding-top: 200px;
+    }
+    
+    .banner-text h1 {
+        font-size: 36px;
+    }
+
+    /* Services section */
+    .service-box {
+        width: 95%;
+    }
+    
+    .single-service {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Features section */
+    .feature-box {
+        width: 95%;
+        flex-direction: column;
+    }
+    
+    .features {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+    
+    .features h1 {
+        font-size: 18px;
+        text-align: left;
+        padding: 5px 10px;
+    }
+    
+    .features-desc {
+        margin-bottom: 15px;
+    }
+    
+    .features-img-container {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    /* Library section */
+    .library-content-box {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    figure {
+        margin: 10px 0;
+    }
+
+    /* Projects section */
+    .projects-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        margin-bottom: 15px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Testimonials section */
+    .testimonial-row {
+        width: 95%;
+    }
+    
+    .testimonial-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Advertisement section */
+    .ads-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .ads-card {
+        margin-bottom: 15px;
+    }
+
+    /* Footer section */
+    .footer-row {
+        width: 95%;
+        flex-direction: column;
+    }
+    
+    .footer-left, .footer-right {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .end-content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .social-media a {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .contact-info, .social-media {
+        padding: 15px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 28px;
+    }
+    
+    .banner-text p {
+        font-size: 14px;
+    }
+    
+    .title-text h1 {
+        font-size: 20px;
+    }
+    
+    .features h1 {
+        font-size: 16px;
+    }
+    
+    .feature-text p {
+        font-size: 13px;
+    }
+    
+    .project-info h3 {
+        font-size: 18px;
+    }
+    
+    .end-content h2 {
+        font-size: 24px;
+    }
+    
+    .footer-row h1 {
+        font-size: 20px;
+    }
+    
+    .contact-info a, .social-media a {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .banner-text {
+        padding-top: 120px;
+    }
+    
+    .banner-text h1 {
+        font-size: 30px;
+    }
+    
+    #sideNav {
+        padding-top: 40px;
+    }
+    
+    nav ul li {
+        margin: 8px 15px;
+    }
+}
+
