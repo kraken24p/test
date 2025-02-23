@@ -9,6 +9,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    position: relative;
 }
 .logo{
     position: absolute;
@@ -270,7 +271,7 @@ hr{
     bottom: 40%;
     opacity: 1;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 770px){
     .service-box {
         width: 95%;
         padding: 20px 10px;
@@ -439,7 +440,7 @@ hr{
     padding: 0 3px;
     text-align: initial;
 }
-@media screen and (max-width: 800PX){
+@media screen and (max-width: 770px){
     .title-text h1{
         font-size: 35px;
     }
@@ -573,13 +574,13 @@ figcaption a:hover {
 }
 
 /* Update responsive styles */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 770px) {
     .image-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
     .image-gallery {
         grid-template-columns: 1fr;
     }
@@ -706,13 +707,13 @@ figcaption a:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 770px) {
     .projects-container {
         display: block;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
     .projects-container {
         grid-template-columns: 1fr;
         width: 95%;
@@ -862,7 +863,7 @@ figcaption a:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 770px) {
     .ads-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1002,7 +1003,7 @@ figcaption a:hover {
     font-size: 14px;
     line-height: 1.8;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 770px){
     .footer-left,.footer-right{
         flex-basis: 100%;
         text-align: center;
