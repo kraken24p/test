@@ -32,46 +32,96 @@
 .banner-text{
     text-align: center;
     color: #fff;
-    padding-top: 360px;
+    padding-top: 180px;
 }
 .banner-text h1{
     font-size: 90px;
     font-family: 'kaushan script',cursive;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .banner-text p{
     font-size: 20px;
     font-style: italic;
+    margin-bottom: 20px;
 }
-.banner-btn a{
-    width: 150px;
+.banner-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.banner-btn a {
+    width: 180px;
     text-decoration: none;
     display: inline-block;
-    margin: 0 10px;
-    padding: 12px 0;
+    padding: 15px 0;
     color: #fff;
-    border: .5px solid #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
     position: relative;
     z-index: 1;
-    transition: color 0.5;
+    transition: all 0.4s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
-.banner-btn a span{
+
+.banner-btn a span {
     width: 0;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
+    background: linear-gradient(90deg, #009688, #00b09b);
     z-index: -1;
     transition: 0.5s;
-
+    border-radius: 30px;
 }
-.banner-btn a:hover span{
+
+.banner-btn a:hover {
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.banner-btn a:hover span {
     width: 100%;
 }
-.banner-btn a:hover{
-    color: #000;
+
+/* Responsive styles */
+@media screen and (max-width: 800px) {
+    .banner-btn {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        gap: 15px;
+    }
+    
+    .banner-btn a {
+        width: 200px;
+        padding: 12px 0;
+        font-size: 13px;
+    }
 }
 
+@media screen and (max-width: 480px) {
+    .banner-btn {
+        margin-top: 20px;
+        gap: 12px;
+    }
+    
+    .banner-btn a {
+        width: 180px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
 
 #sideNav{
     width: 250px;
@@ -98,8 +148,8 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
+   text-decoration: none;
+   color: #fff;
     font-size: 16px;
     font-weight: 500;
     display: block;
@@ -153,6 +203,79 @@ nav ul li:hover::before {
     margin-top: 15px;
     transition: transform 0.3s ease;
 }
+.welcome-text {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 150, 136, 0.4));
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 800px) {
+    .banner-text {
+        padding-top: 130px;
+    }
+    
+    .banner-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .banner-text p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .welcome-text {
+        margin: 25px 20px;
+        padding: 25px 20px;
+    }
+    
+    .welcome-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-text {
+        padding-top: 100px;
+    }
+    
+    .banner-text h1 {
+        font-size: 40px;
+    }
+    
+    .banner-text p {
+        font-size: 16px;
+    }
+    
+    .welcome-text {
+        margin: 20px 15px;
+        padding: 20px 15px;
+    }
+    
+    .welcome-text p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 770px) {
@@ -240,10 +363,9 @@ nav ul li:hover::before {
     position: absolute;
     top: 0;
     border-radius: 7px;
-    cursor: pointer;
-    background: linear-gradient(rgba(0,0,0,0.5),#009688);
-    opacity: 0;
-    transition: 1s;
+    background: linear-gradient(rgba(0,0,0,0.5), #009688);
+    opacity: 1;
+    transition: 0.3s;
 }
 .single-service:hover .overlay{
     opacity: 1;
@@ -251,11 +373,11 @@ nav ul li:hover::before {
 .service-desc{
     width: 80%;
     position: absolute;
-    bottom: 0;
-    opacity: 0;
+    bottom: 40%;
+    opacity: 1;
     left: 50%;
     transform: translateX(-50%);
-    transition: 1s;
+    transition: 0.3s;
 }
 hr{
     background: #fff;
@@ -335,22 +457,64 @@ hr{
     font-size: 50px;
 }
 .feature-box{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-}
-.features{
-    flex-basis: 50%;
-}
-.features-img-container {
-    flex-basis: 50%;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+}
+.course-table {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.course-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-table th {
+    background: #009688;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.course-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.course-table tr:hover {
+    background: rgba(0,150,136,0.05);
+}
+
+.course-table a {
+    color: #009688;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.course-table a:hover {
+    color: #007a6e;
+}
+
+.course-table .fa {
+    color: #009688;
+    font-size: 18px;
+}
+
+.features-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin: auto;
+    margin-top: 20px;
 }
 
 .features-img {
@@ -444,17 +608,20 @@ hr{
     .title-text h1{
         font-size: 35px;
     }
-    .features{
-        flex-basis: 100%;
+    .feature-box {
+        width: 95%;
     }
-    .features-img{
-        flex-basis: 100%;
+    .course-table {
+        padding: 10px;
+        overflow-x: auto;
     }
-    .features-img img{
-        width: 100%;
+    .course-table th, 
+    .course-table td {
+        padding: 10px;
+        font-size: 14px;
     }
-    .features-img-container{
-        flex-basis: 100%;
+    .features-img-container {
+        grid-template-columns: 1fr;
     }
     .features-img:hover .feature-desc {
         bottom: 30%;
@@ -504,7 +671,7 @@ hr{
 .content {
     width: 100%;
     min-height: 100vh;
-    position: relative;
+   position: relative;
 }
 
 
@@ -552,25 +719,23 @@ figure img {
 }
 
 figcaption {
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
-    font-size: 14px;
-    color: white;
-    cursor: pointer;
-}
-
-figcaption:hover {
-    color: #009688;
+    padding: 0 10px;
 }
 
 figcaption a {
-    color: white;
+    color: #009688;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
 }
 
 figcaption a:hover {
-    color: #009688;
+    color: #007a6e;
 }
 
 /* Update responsive styles */
@@ -703,8 +868,8 @@ figcaption a:hover {
     color: #009688;
     padding: 5px 15px;
     border-radius: 15px;
-    font-size: 12px;
-}
+        font-size: 12px;
+    }
 
 /* Responsive Design */
 @media screen and (max-width: 770px) {
@@ -1046,3 +1211,261 @@ figcaption a:hover {
     color: #007a6e !important;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #007a6e;
+    transform: translateY(-3px);
+}
+
+.back-to-top i {
+    font-size: 24px;
+}
+
+/* Active navigation state */
+nav ul li a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: translateX(10px);
+}
+
+nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 770px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .back-to-top i {
+        font-size: 20px;
+    }
+}
+
+/* Course tooltips */
+.course-table a[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: rgba(0, 150, 136, 0.9);
+    color: white;
+        font-size: 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: max-content;
+    max-width: 250px;
+}
+
+.course-table a[data-tooltip]:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 150, 136, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.course-table a[data-tooltip]:hover:before,
+.course-table a[data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+    bottom: 125%;
+}
+
+/* Library search and filter */
+.library-search {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#bookSearch {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#bookSearch::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#bookSearch:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.5);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-btn:hover {
+    background: rgba(0, 150, 136, 0.5);
+}
+
+.filter-btn.active {
+    background: #009688;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Hide filtered items */
+.image-gallery figure.hidden {
+    display: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 770px) {
+    .library-search {
+        padding: 0 15px;
+    }
+    
+    .filter-buttons {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    #bookSearch {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Loading animation styles */
+.loading-animation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #009688;
+    font-weight: 500;
+}
+
+.loading-animation .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #009688;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Enhanced download link styles */
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(0, 150, 136, 0.1);
+    border-radius: 20px;
+    color: #98e608;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background: rgba(0, 150, 136, 0.2);
+    transform: translateY(-2px);
+}
+
+.download-link .fa {
+    font-size: 16px;
+}
+
+.download-link.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Success animation */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.download-success {
+    color: #4CAF50;
+    animation: successPulse 0.5s ease;
+}
