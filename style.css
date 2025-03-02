@@ -77,7 +77,6 @@
     width: 250px;
     height: fit-content;
     position: fixed;
-    right: -250px;
     top: 0;
     background: linear-gradient(#009688, #006b5f);
     z-index: 2;
@@ -158,7 +157,6 @@ nav ul li:hover::before {
 @media screen and (max-width: 800px) {
     #sideNav {
         width: 200px;
-        right: -200px;
         height: fit-content;
     }
     
@@ -577,7 +575,7 @@ figcaption a:hover {
 /* Update responsive styles */
 @media screen and (max-width: 770px) {
     .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
