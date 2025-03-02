@@ -120,7 +120,7 @@
                     </tr>
                     <tr>
                         <td><a href="https://drive.google.com/drive/u/1/folders/1C5of8cOo--iAoQzCqiHCBPTspj58c8Re">EENG 251</a></td>
-                        <td>Circuit and Network Analysis I</td>
+                        <td>Circuit and Network Analysis I </td>
                         <td><i class="fa fa-check-square-o"></i></td>
                     </tr>
                     <tr>
@@ -146,7 +146,7 @@
                 </tbody>
             </table>
         </div>
-        
+        <h1>Click the images below to access revision materials</h1>
         <div class="features-img-container">
             <div class="features-img">
                 <img src="images/o.jpg">
@@ -456,13 +456,14 @@
     var sideNav = document.getElementById("sideNav");
     var menu = document.getElementById("menu");
 
-    // Function to close nav
+    // Enhanced close nav function with animation
     function closeNav() {
  sideNav.style.right = "-250px";
         menu.src = "images/menu.png";
+        menuBtn.classList.remove('nav-open');
     }
 
-    // Toggle nav on menu button click
+    // Enhanced menu button click handler
     menuBtn.onclick = function(event) {
         event.stopPropagation();
         if(sideNav.style.right === "0px") {
@@ -470,29 +471,49 @@
         } else {
      sideNav.style.right = "0";
             menu.src = "images/close.png";
+            menuBtn.classList.add('nav-open');
         }
     }
 
-    // Close nav when clicking anywhere else on the page
+    // Enhanced document click handler
     document.addEventListener('click', function(event) {
         if (!sideNav.contains(event.target) && !menuBtn.contains(event.target)) {
             closeNav();
         }
     });
 
-    // Prevent nav from closing when clicking inside it
+    // Prevent nav from closing when clicking inside
     sideNav.onclick = function(event) {
         event.stopPropagation();
     }
 
-    // Back to top button functionality
+    // Enhanced back to top functionality with smooth animation
     const backToTop = document.querySelector('.back-to-top');
+    let lastScrollPosition = 0;
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        lastScrollPosition = window.pageYOffset;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (lastScrollPosition > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
+    });
+
+    // Smooth scroll to top with animation
+    backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Active navigation state
